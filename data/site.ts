@@ -1,3 +1,5 @@
+const assetBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export const siteConfig = {
   productName: "One Search",
   legalEntityName: null as string | null,
@@ -11,9 +13,9 @@ export const siteConfig = {
   publicationReady: false,
   video: {
     enabled: false,
-    webm: "/media/privacy-loop.webm",
-    mp4: "/media/privacy-loop.mp4",
-    poster: "/media/privacy-poster.svg",
+    webm: `${assetBasePath}/media/privacy-loop.webm`,
+    mp4: `${assetBasePath}/media/privacy-loop.mp4`,
+    poster: `${assetBasePath}/media/privacy-poster.svg`,
   },
 } as const;
 
